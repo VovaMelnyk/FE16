@@ -34,11 +34,9 @@ var, let, const.
 5) undefined - значення не присвоєно
 6) object - обєкт(ключ і значення)
 7) Symbol - символ
+
 метод typeof
 
-Інтерактивність
-alert, console.log
-prompt,confirm
 
 Математичні оператори
 + NaN
@@ -46,6 +44,9 @@ prompt,confirm
 /
 *
 %
+Інтерактивність
+alert, console.log
+prompt,confirm
 
 Перетворення на число
 +
@@ -54,7 +55,9 @@ toFixed();
 
 parseInt
 parseFloat
+Math
 isNaN
+
 Екранування
 Шаблоні стороки
 

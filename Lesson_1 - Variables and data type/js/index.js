@@ -21,13 +21,13 @@ dfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf
 sdfsdfsdfsdfsdfsd
 */
 
-let word = 'JS';
-let number = 20;
-let bool = true;
-let n = null;
-let a = undefined;
+// let word = 'JS';
+// let number = 20;
+// let bool = true;
+// let n = null;
+// let a = undefined;
 
-let id = Symbol(5);
+// let id = Symbol(5);
 
 // let name = 'Late';
 // let price = 40;
@@ -125,3 +125,158 @@ let id = Symbol(5);
 
 // console.log(z); // is not defined
 // const z = 50;
+
+// +
+//
+// let a = 5;
+// a = a + 1;
+// a += 2;
+// a = a + 2;
+// console.log(a++);
+// console.log(a);
+// console.log(++a);
+
+// let a = 5;
+// let b = 10;
+// let result = a + b;
+// console.log(result);
+// console.log(typeof result);
+
+// let a = 6;
+// let b = 10;
+// let c = '12';
+// let d = 1;
+// let result = d + b + c + a;
+// console.log(result);
+// console.log(typeof result);
+
+// let a = 'Join ';
+// let b = 'us';
+// console.log(a + b);
+// console.log(typeof a + b)
+
+
+// let a = 3;
+// let b = ' join';
+// console.log(a + b); 
+
+// let a = true;
+// let b = ' join';
+// console.log(a + b); 
+
+// let a = true;
+// let b = 12;
+// console.log(a + b); 
+
+// let a = true;
+// let b = true;
+// console.log(a + b);
+
+// let a = true;
+// let b = 'false';
+// console.log(a + b);
+
+// let a = 12;
+// let b = null;
+// console.log(a + b);
+
+// let a = undefined;
+// let b = 10;
+// console.log(a + b); 
+
+// let a = undefined;
+// let b = false;
+// console.log(a + b);
+// console.log(typeof NaN);
+
+// -
+
+// let a = 10;
+// let b = 5;
+// console.log(b - a);
+
+// let a = 'join us';
+// let b = 'us';
+// let result = a - b;
+// console.log(result);
+// console.log(typeof result);
+
+// let a = 10;
+// let b = '2';
+// let c = 5;
+// console.log(a + b - c);
+
+// let a = 10;
+// let b = 'true';
+// console.log(a - b);
+
+// *
+
+// let a = 10;
+// let b = 5;
+// console.log(a * b);
+
+// let a = 2;
+// let b = 'start';
+// console.log(a * b);
+
+// let a = 2;
+// let b = '2.2';
+// console.log(a * b);
+
+// let a = 10;
+// let b = undefined;
+// console.log(a * b);
+
+// let a = 10;
+// let b = Infinity;
+// console.log(a / 0);
+
+//  %
+// let a = 10;
+// let b = 3;
+// console.log(a % b);
+
+// console.log('object');
+// alert('Hello');
+
+// let answer = prompt('How old are you');
+// console.log(answer);
+
+// let answer = confirm('Are you ready?');
+// console.log(answer);
+
+// let num1 = prompt('Enter number');
+// let num2 = prompt('Enter number');
+// let num3 = prompt('Enter number');
+// console.log(Number(num3));
+// console.log(Number(num1) + Number(num2) + Number(num3));
+
+// let a = '2rem';
+// let b = '150px';
+// let c = '2.5vw';
+// let d = 'qweqw25';
+
+// console.log(parseInt(a));
+// console.log(parseInt(b));
+// console.log(parseFloat(c));
+
+// let a = 0.1;
+// let b = 0.2;
+// let result = a + b
+// console.log(result.toFixed(2));
+
+// let a = 'Hello';
+// console.log(a.length);
+// console.log(a.toUpperCase());
+// console.log(a.toLowerCase());
+// console.log(a.includes('he'));
+// console.log(a.indexOf('e'));
+// console.log(a.indexOf('ll'));
+
+// let name = 'Homer';
+// let lastName = 'Simpson';
+// let town = 'Springfield';
+
+// console.log(name + lastName + 'lives' + 'in' + town);
+// console.log(`${name} ${lastName} lives in ${town}`);

@@ -92,8 +92,8 @@
 // }
 
 // do {
-    // let userNumber = prompt('Enter number');
-    // arr.push(Number(userNumber));
+// let userNumber = prompt('Enter number');
+// arr.push(Number(userNumber));
 //     counter += 1;
 // } while (counter < 5)
 
@@ -112,5 +112,36 @@
 // console.log(sum);
 
 // for of
-// break
+// let arrOfNumbers = [1, 2, 3, 5, 8, 6, 1, 5, 7];
+
+// for (let i = 0; i < arrOfNumbers.length; i+=1) {
+//     // console.log(arrOfNumbers[i]);
+//     // console.log(i, arrOfNumbers[i]);
+// }
+
+// for (let element of arrOfNumbers) {
+//     console.log(arrOfNumbers.indexOf(element),element);
+// }
+
 // continue
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// for (let i = 0, max = arr.length; i < max; i+=1) {
+//     if(arr[i] % 2 !== 0) {
+//         continue;
+//     }
+//     console.log(arr[i]);
+// }
+
+// break
+// let arr = [];
+// for (let i = 0; i > -Infinity; i-=1) {
+//     let userNumber = prompt('Enter number');
+//     if(Number(userNumber) === 0) {
+//         break;
+//     }
+//     arr.push(Number(userNumber));
+// }
+// console.log(arr);
+

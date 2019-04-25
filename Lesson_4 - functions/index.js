@@ -30,31 +30,119 @@
 
 // 1) Створити цикл що наповнить масив числами 1 - 2019 +
 // 2) Цикл який перевіряє чи рік високосний.
-// 2,1) Створити ф-ю перевірки року з одним параметром
+// 2,1) Створити ф-ю перевірки року з одним параметром +
 // 3) Наповнити новий масив значеннями
 // 4) Визначити довжину масиу.
 
-// const yearsArr = [];
-// for (let i = 1; i <= 2019; i +=1) {
-//     yearsArr.push(i);
+// function createYearsArr () {
+//     const yearsArr = [];
+//     for (let i = 1; i <= 2019; i +=1) {
+//         yearsArr.push(i);
+//     }
+//     return yearsArr;
 // }
-// console.log(yearsArr);
 
 // function checkYear(year) {
 //     if(typeof year !== 'number') {
 //         return;
 //     }
+//     // if( year % 4 === 0) {
+//     //     return true;
+//     // } else {
+//     //     return false;
+//     // }
+//    return year % 4 === 0 ? true : false;
+// }
+// // def parameters
 
-//     if( year % 4 === 0) {
-//         return true;
-//     } else {
-//         return false;
+// function createFinalResultArr (arr = []){
+//     const finalResult = [];
+//     for (let el of arr) {
+//         let conditionResult = checkYear(el);
+//         if(conditionResult) {
+//             finalResult.push(el);
+//         }
 //     }
-
-//     // rewrite to ternar operator
+//     return finalResult;
 // }
 
+// function start () {
+//     let result = createYearsArr(); // масив
+//     return createFinalResultArr(result).length; // cb
+// }
 
+// console.log(checkYear);
+
+// arguments
+// function sum () {
+//     // console.log(arguments);
+//     let arr = Array.from(arguments);
+//     // console.log("TCL: sum -> arr", arr);
+//     let acc = 0;
+//     for (let el of arr) {
+//         acc += el;
+//     }
+//     return acc;
+// }
+// console.log(sum(1,2,3)); // 6
+// console.log(sum(1,10)); // 11
+// console.log(sum(1,2,3,5,10,50)); //71
+
+// call stack
+
+// console.log('First');
+// console.log('Second');
+// function start () {
+//  createFinalArr (
+//       checkYear() 
+//       )  
+// }
+// Arrow func
+
+// 1) З строки зробити масив
+// 2) Перевернути масив
+// 3) з реверса робимо строку
+// 4) Порівняння
+
+const checkPalindrome = function (str) {
+    // let arr = str.split('');
+    // arr.reverse();
+    // let newStr = arr.join('');
+    return str === str.split('').reverse().join('');
+}
+
+// const isPalinfrome = (str) => {
+//     return str === str.split('').reverse().join('');
+// }
+
+// const isPalinfrome = str => {
+//     return str === str.split('').reverse().join('');
+// }
+
+// const isPalinfrome = str => str === str.split('').reverse().join('');
+
+// console.log(checkPalindrome('olo')); // true
+// console.log(checkPalindrome('potmt')); // false
+
+// Scope
+
+// let a = 5;
+// let b = 50;
+// function one () {
+//     let a = 10;
+//     console.log('in first',a);
+//     console.log('in first',b);
+
+//     function second () {
+//         let b = 100;
+//         console.log('in second',a);
+//         console.log('in second',b);
+//     }
+//     second();}
+
+// one();
+
+// Clousure
 
 
 

@@ -59,7 +59,7 @@
 //     const finalResult = [];
 //     for (let el of arr) {
 //         let conditionResult = checkYear(el);
-//         if(conditionResult) {
+//         if(conditionResult === true) {
 //             finalResult.push(el);
 //         }
 //     }
@@ -104,12 +104,12 @@
 // 3) з реверса робимо строку
 // 4) Порівняння
 
-const checkPalindrome = function (str) {
+// const checkPalindrome = function (str) {
     // let arr = str.split('');
     // arr.reverse();
     // let newStr = arr.join('');
-    return str === str.split('').reverse().join('');
-}
+//     return str === str.split('').reverse().join('');
+// }
 
 // const isPalinfrome = (str) => {
 //     return str === str.split('').reverse().join('');

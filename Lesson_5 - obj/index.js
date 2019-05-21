@@ -221,7 +221,7 @@
 //         } else {
 //             prompt('Enter your credit card number');
 //         }
-        
+
 //     },
 //     canTankMove() {
 //         return !this.isEngineBroken
@@ -252,7 +252,7 @@
 //         } else {
 //             prompt('Enter your credit card number');
 //         }
-        
+
 //     },
 //     canTankMove() {
 //         return !this.isEngineBroken
@@ -267,8 +267,116 @@
 // console.log(tank2);
 
 // 12)  spread array 
+// let names = ['Homer', 'Bender'];
+// let lastName = ['Simpson', 'Rodriges'];
+// let result = [...lastName,...names];
+// console.log(result);
+// let frontEnd = ['JS', 'React', 'HTML', 'CSS']
+// let fullStack = ['Node.JS', ...frontEnd];
+// console.log(fullStack); 
 // 13) spread obj
+// let desc = {
+//     title: 'Warior',
+//     year: 2019,
+//     time: 120
+// }
+// let trailer = {
+//     id: 2,
+//     url: 'youtube/trailer/warior&2019'
+// }
+
+// let similarMovies = {
+//     id: 5,
+//     count: 5,
+//     filmList : [
+//         {
+//             title: 'Movie1',
+//             year: 2010,
+//             time: 90
+//         },
+//         {
+//             title: 'Movie2',
+//             year: 2010,
+//             time: 100
+//         },{
+//             title: 'Movie2',
+//             year: 2010,
+//             time: 85
+//         }
+//     ]
+// }
+
+// let filmInfo = {
+//     ...desc,
+//     ...similarMovies,
+//     ...trailer,
+//     budget: '100000$',
+//     time: 150,
+// }
+// console.log(filmInfo);
 // 14) rest
+// function sum(...numbers) {
+//     let total = 0;
+//     for (let el of numbers) {
+//         total += el;
+//     }
+//     return total;
+// }
+// console.log(sum(5, 6, 7, 82, 41, 225));
 // 15) деструктуризація обєктів
+// let user = {
+//     name: 'User',
+//     budget: {
+//         total: 5000,
+//         dayLimit: 1500,
+//     },
+//     membership: {
+//         status: 'basic',
+//         email: 'user@gmai.com'
+//     }
+// }
+// const name = user.name;
+// const budget = user.budget;
+// const membership = user.membership
+
+// const total = user.budget.total;
+// const status = user.membership.status;
+// const {
+//     name,
+//     budget,
+//     membership,
+//     email
+// } = user;
+// console.log(name,budget,membership);
+// const {
+//     name,
+//     budget :{total},
+//     membership: {status},
+//     email
+// } = user;
+// console.log(name,total,status);
 // 16) Деструктуризація масивів
+// let result = ['Hello', 500, {title: 'Chapter1', pageNumber: 1}];
+// let title = result[0];
+// let totaPage = result[1];
+// let firstChapter = result[2];
+// const [title, totalPage, firstChapter, number] = result
+// console.log(title);
+// console.log(totalPage);
+// console.log(firstChapter);
+// console.log(number);
 // 17) Передача по силці і по значеню
+// let a = 5;
+// let b = a;
+// console.log(a, b);
+// a = 10;
+// console.log(a , b);
+
+// let user = {
+//     name: 'Bob'
+// };
+// // let user2 = user;
+// let user2 = {...user}
+// user.name = 'Jack';
+// console.log('user one',user);
+// console.log('user two', user2);

@@ -49,6 +49,93 @@
 // Робота з  Атрибутами (hasAttribute, getAtr, setAtr, removeAtr, attributes)
 // data-atr
 // Створення елемента 
+// let link = document.createElement('a');
+// link.textContent = "Google";
+// link.setAttribute('href', 'https://www.google.com/');
+// link.setAttribute('target', '_blank');
+// console.log(link.hasAttribute('target'));
+// console.log(link.getAttribute('href'));
+// console.log(link.href);
+// link.title = 'Google title';
+// // link.removeAttribute('target');
+// console.log(link.attributes);
+// link.classList.add('item', 'iten');
+// link.classList.add('item--red');
+// console.log(link);
+// let list = document.querySelector('.list');
+// let item1 = document.querySelector('#item1');
+// item1.append(link);
+// list.prepend(link);
+// list.before(link);
+// let cloneLink = link.cloneNode(true);
+// console.log(cloneLink);
+// list.after(link);
+// list.before(cloneLink);
 // Вставка на екран (append, prepend, after, before, replace, clone, remove) 
 // innerHTML - create markup
 // Fragment
+
+// Create site 
+// Select element
+let root = document.querySelector('#root');
+// Create elements
+let header = document.createElement('header');
+let heroContainer = document.createElement('div');
+let mainTitle = document.createElement('h1');
+let pictureContainer = document.createElement('div');
+let pictureDiv = document.createElement('div');
+let titleContainer = document.createElement('div');
+let name = document.createElement('h1');
+let creator = document.createElement('h3');
+
+// Classes
+heroContainer.classList.add('hero--container');
+pictureContainer.classList.add('picture--container');
+pictureDiv.classList.add('picture');
+titleContainer.classList.add('title--container');
+
+
+
+// Atributes
+
+
+// textContent
+mainTitle.textContent = `there's that line from newton about standing on the shoulders of giants. we're all standing on dennis' shoulders.`;
+name.textContent = 'dennis ritchie';
+creator.innerHTML = `founder of <span>c language</span> and <span>uNIX</span>`
+
+// add to screen
+root.append(header);
+header.append(heroContainer);
+heroContainer.append(mainTitle);
+heroContainer.append(pictureContainer);
+pictureContainer.append(pictureDiv);
+header.append(titleContainer);
+titleContainer.append(name);
+titleContainer.append(creator);
+
+function createHtml(tag, className, atrObj, contentType, content, container, method) {
+    let el = document.createElement(tag);
+    if (className) {
+        el.classList.add(className);
+    }
+    if (typeof atrObj === 'object') {
+        for (const key in atrObj) {
+            el.setAttribute(key, atrObj[key]);
+        }
+    }
+    if (contentType) {
+        el.textContent = content;
+    } else {
+        el.innerHTML = content;
+    }
+
+    container[method](el);
+    return el;
+}
+
+let divCreateWithFunc = createHtml('div', 'testClass', {
+    id: 'testID'
+}, false, '<span>Lorem Ipsum</span>', titleContainer, 'append');
+
+let title = createHtml('h3', null, null, true, 'Title', divCreateWithFunc, 'prepend')

@@ -61,3 +61,90 @@ body {
     width: 300px;
     margin: auto;
 }
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    top: 0;
+    left: 0;
+}
+
+.modal {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+.main {
+    width: 500px;
+    height: 500px;
+    background-color: green;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+.sub {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+.minor {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+.child {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    margin: auto;
+    cursor: pointer;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.gallery__item {
+    flex-basis: 30%;
+    height: 30%;
+    background-color: red;
+    transition: 1s ease-in-out;
+}
+
+.gallery__item--scale {
+    transform: scale(2);
+}

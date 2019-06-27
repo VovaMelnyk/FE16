@@ -1,0 +1,11 @@
+window.innerWidth
+window.innerHeight
+clientHeight
+clientWidth
+mouseenter
+
+
+1) Додати подію яка реагує на наведення мишки +
+2) Змінити координати Кнопки на випадкові +
+3) Кнопка не повинна залишати межі екрану
+

@@ -59,8 +59,54 @@ let btn = document.querySelector('button');
 
 // Focus/blur, input,change, submit - (label animation example)
 // DOMContentLoaded
-// Event propagation (3 phases - capture target , bubbling)
-// bubbling example
+// let body = document.querySelector('body');
+// let overlay = document.createElement('div');
+// let modal = document.createElement('div');
+// let close = document.createElement('span');
+// overlay.classList.add('overlay');
+// modal.classList.add('modal');
+// close.classList.add('close');
+// close.textContent = 'x'
+// modal.append(close);
+// overlay.append(modal);
+// function openModal() {
+//     body.append(overlay);
+// }
+// function closeModal() {
+//     overlay.classList.add('hide');
+// }
+// close.addEventListener('click', closeModal);
+// window.addEventListener('DOMContentLoaded', openModal);
+// // Event propagation (3 phases - capture target , bubbling)
+// // bubbling example
+// let child = document.querySelector('.child');
+// let sub = document.querySelector('.sub');
+// function showcConfirm (e) {
+//     e.stopPropagation();
+//     confirm('Child click');
+// }
+
+// function showAlert() {
+//     alert('Sub click');
+// }
+
+// child.addEventListener('click', showcConfirm);
+// sub.addEventListener('click', showAlert);
 // e.target
+// let gallery = document.querySelector('.gallery');
+// function scale(evt) {
+//     if(evt.target.classList.contains('gallery__item')) {
+//         evt.target.classList.add('gallery__item--scale');
+//     }
+// }
+// gallery.addEventListener('click', scale);
 // e.stopPropogation
 // event delegation
+
+// pageXOffset
+// pageYOffset
+
+// elem.clientWidth elwidth
+// elem.clientHeight elHeight
+
+

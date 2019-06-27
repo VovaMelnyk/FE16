@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*.btn {*/
+            /*display: block;*/
+            /*padding: 10px;*/
+            /*font-family: Arial, Helvetica, sans-serif;*/
+            /*font-size: 20px;*/
+            /*min-width: 80px;*/
+            /*background-color: red;*/
+            /*border: none;*/
+            /*margin-bottom: 10px;*/
+            /*border-radius: 5px;*/
+            /*line-height: 30px;*/
+            /*text-align: center;*/
+            /*outline: none;*/
+        /*}*/
+        /*.controls {*/
+            /*display: flex;*/
+            /*justify-content: space-around;*/
+        /*}*/
+        /*.text {*/
+            /*font-family: Arial, Helvetica, sans-serif;*/
+            /*font-size: 30px;*/
+            /*display: block;*/
+        /*}*/
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .calculator, .sum, .minus, .mult, .divide, .pow, .get-Value {
+            margin: auto;
+            padding: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+        }
+        .calculator{
+            font-size: 60px;
+            color: #190cd1;
+        }
+        .et-Value {
+            background-color: rgb(189, 155, 155);
+        }
+
+        .sum {
+            background-color: rgb(228, 79, 79);
+        }
+        .minus{
+            background-color: rgb(63, 206, 206);
+        }
+        .mult{
+            background-color: rgb(79, 228, 116);
+            text-align: center;
+        }
+        .divide{
+            background-color: rgb(228, 79, 196);
+        }
+        .pow{
+            background-color: rgb(213, 228, 79);
+        }
+        #sum, #minus, #mult, #divide, #pow {
+            font-size: 30px;
+            color: rgb(6, 90, 48);
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="controls">-->
+        <!--<button class="btn start">Start</button>-->
+        <!--<button class="btn plus">+</button>-->
+        <!--<button class="btn minus">-</button>-->
+        <!--<button class="btn pow">Pow</button>-->
+        <!--<button class="btn devide">/</button>-->
+        <!--<button class="btn mult">*</button>-->
+<!--</div>-->
+<!--<span class="text a"></span>-->
+<!--<span class="text b"></span>-->
+<!--<span class="text sum"></span>-->
+<!--<span class="text min"></span>    -->
+<!--<span class="text pw"></span>    -->
+<!--<span class="text dev"></span>    -->
+<!--<span class="text mlt"></span>    -->
+    <h1 class='calculator'>calculator</h1>
+    <div class='box'>
+        <button class='get-Value'>start</button>
+        <button class ='sum'>sum  +</button>
+        <button class='minus'>minus  -</button>
+        <button class='mult'>mult  *</button>
+        <button class = 'divide'>divide  /</button>
+        <button class= 'pow'>pow</button>
+    </div>
+    <p class id='a'></p>
+    <p class id='b'></p>
+    <p class id='sum'></p>
+    <p class id='minus'></p>
+    <p class id='mult'></p>
+    <p class id='divide'></p>
+    <p class id='pow'></p>
+ <script src="index.js"></script>   
+</body>
+</html>

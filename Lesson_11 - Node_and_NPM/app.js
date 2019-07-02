@@ -4,12 +4,16 @@
 // node filename
 // const str = 'Hello';
 // console.log(str);
+// function greet () {
+//     return 'Hello World';
+// }
+// console.log(greet());
 // npm
 // commands (
-//  npm init
+//  npm init npm init --yes
 // npm install npm i
 // npm i name
-// npm uninstall
+// npm uninstall name
 // npm start npm test npm run name
 // npm update
 // npm outdated
@@ -30,4 +34,7 @@
 // console.log(obj.greet());
 // ES6 import export
 // webpack
-
+//  const calendar = require('./calendar');
+//  const generateId = require('./id');
+//  console.log(calendar.showTodayDate());
+//  console.log(generateId.createId());

@@ -1,3 +1,4 @@
+// Plagin, lib, framework
 // Templating
 // Process scheme
 // Syntax {{}}
@@ -8,6 +9,14 @@
 // 3 Render template
 // Add to webpack
 
+// 1) Create template;
+// 2) Crate or get access to obj;
+// 3) template to js
+// 4) Handlebars.compile
+// 5) Create markup
+// 6) Paste markup to html
+
+
 
 // // simple
 // const data = {
@@ -15,37 +24,39 @@
 //     position: "FE Developer",
 //     language: "Javascript"
 // }
-// // get innerHTML data;
-// const template = document.querySelector('#firstT').innerHTML.trim();
-// const root = document.querySelector('#root');
-// // console.log(template);
 
-// // run compile function
-// const templateScript = Handlebars.compile(template);
-
-// // render data
-// const markup = templateScript(data);
-// // console.log(markup);
-// root.innerHTML = markup
+// let root = document.querySelector('#root');
+// let template = document.querySelector('#simpleTemplate').innerHTML.trim();
+// console.log('template',template);
+// let templateScript = Handlebars.compile(template);
+// let markup = templateScript(data);
+// console.log('markup',markup);
+// root.innerHTML = markup;
 
 // helpers each and if
 
 // const data = {
-//     frameworks: ["React", "Vue", "Angular"]
+//     frameworks: ["React", "Vue", "Angular"],
+//     libs: ["moment", "lodash", "axios", "propTypes"]
 // }
 
-// const frameworks =  ["React", "Vue", "Angular"]
+// const root = document.querySelector('#root');
+// const template = document.querySelector('#eachTemplate').innerHTML.trim();
+// const templateScript = Handlebars.compile(template);
+// const markup = templateScript(data);
+// // console.log(markup);
+// root.innerHTML = markup;
+
+// const frameworks =  ["React", "Vue", "Angular"];
 
 // const root = document.querySelector('#root');
-// const template = document.querySelector("#secondT").innerHTML.trim()
-// // console.log(template);
+// const template = document.querySelector('#arrayTemplate').innerHTML.trim();
 // const templateScript = Handlebars.compile(template);
-// // const markup = templateScript(data);
-// const markup = templateScript(frameworks)
+// const markup = templateScript(frameworks);
 // root.innerHTML = markup;
 
 // const data = {
-//     domestic : true,
+//     domestic : false,
 //     domestic_address: "Ukraine, Kyiv",
 //     international_address: "USA, New-York",
 //     user: {
@@ -55,10 +66,14 @@
 // }
 
 // const root = document.querySelector('#root');
-// const template = document.querySelector('#thirdT').innerHTML.trim();
+// const template = document.querySelector('#ifTemplate').innerHTML.trim();
 // const templateScript = Handlebars.compile(template);
 // const markup = templateScript(data);
 // root.innerHTML = markup;
+
+
+
+
 
 // const data = [];
 
@@ -72,3 +87,20 @@
 //   const templateScript = Handlebars.compile(template);
 //   const markup = templateScript(data);
 //   root.innerHTML = markup;
+
+const galleryItems = [
+    { img: 'https://placeimg.com/300/150/animals', text: 'animals' },
+    { img: 'https://placeimg.com/300/150/arch', text: 'architecture' },
+    { img: 'https://placeimg.com/300/150/nature', text: 'nature' },
+    { img: 'https://placeimg.com/300/150/people', text: 'people' },
+    { img: 'https://placeimg.com/300/150/tech', text: 'tech' },
+    { img: 'https://placeimg.com/300/150/any', text: 'random' }
+];
+
+  const root = document.querySelector('#root');
+  const template = document.querySelector('#gallery').innerHTML.trim();
+  const templateScript = Handlebars.compile(template);
+  const markup = templateScript(galleryItems);
+  root.innerHTML = markup;
+
+

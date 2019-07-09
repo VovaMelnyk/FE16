@@ -20,8 +20,8 @@ import './styles.css';
 
 // gallery 
 
-// const markup = galleryTemplate(galleryItems);
+const markup = galleryTemplate(galleryItems);
 
-// console.log(markup);
+console.log(markup);
 
-// root.innerHTML = markup;
+root.innerHTML = markup;

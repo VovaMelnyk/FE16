@@ -1,0 +1,1 @@
+export const frameworksArr = ["React", "Vue", "Angular"];

@@ -1,4 +1,4 @@
-export const galleryItems = [
+const galleryItems = [
     { img: 'https://placeimg.com/300/150/animals', text: 'animals' },
     { img: 'https://placeimg.com/300/150/arch', text: 'architecture' },
     { img: 'https://placeimg.com/300/150/nature', text: 'nature' },
@@ -7,4 +7,4 @@ export const galleryItems = [
     { img: 'https://placeimg.com/300/150/any', text: 'random' }
 ];
 
-export const frameworks =  ["React", "Vue", "Angular"];
+export default galleryItems;

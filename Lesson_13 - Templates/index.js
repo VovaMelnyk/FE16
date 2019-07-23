@@ -102,5 +102,3 @@ const galleryItems = [
   const templateScript = Handlebars.compile(template);
   const markup = templateScript(galleryItems);
   root.innerHTML = markup;
-
-

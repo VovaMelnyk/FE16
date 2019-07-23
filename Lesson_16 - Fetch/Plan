@@ -1,0 +1,19 @@
+TCP/IP
+HTTP/HTTPS
+DNS => Connect => Request => Pending => Get Data;
+API and REST
+4 request methods (GET,POST,PUT,DELETE)
+Headers
+Codes 100 => 200 => 300 => 400 => 500 =>
+Create url
+fetch
+Network
+https://pixabay.com/api/docs/
+https://jsonplaceholder.typicode.com/
+https://randomuser.me/
+
+Create gallery with search
+
+XMLHttpRequest
+local server and CRUD
+

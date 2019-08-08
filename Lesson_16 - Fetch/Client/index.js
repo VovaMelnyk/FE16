@@ -61,7 +61,7 @@
 const input = document.querySelector('.search__input');
 const form = document.querySelector('.search');
 const gallery = document.querySelector('.gallery');
-const deleteBtn = document.querySelector('.delete');
+// const deleteBtn = document.querySelector('.delete');
 
 function createGallery(obj) {
     const resultString = obj.hits.reduce((acc, el) => acc + `<div class="gallery__item">
@@ -127,7 +127,7 @@ function updateImg() {
 
 form.addEventListener('submit', getImg);
 gallery.addEventListener('click', addToFavourite);
-deleteBtn.addEventListener('click', updateImg);
+// deleteBtn.addEventListener('click', updateImg);
 
 // C - create
 // R - read

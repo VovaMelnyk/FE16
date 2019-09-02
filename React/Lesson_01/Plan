@@ -1,0 +1,21 @@
+1) npm install -g create-react-app
+2) npx create-react-app my-app || npm init react-app my-app || yarn create react-app my-app || create react-app my-app
+3) https://reactjs.org, https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=ru
+4) MPA (https://www.epidemicsound.com/browse/) vs SPA
+5) Browser DOM and Virtual DOM (https://www.cronj.com/blog/wp-content/uploads/DOM2.png)
+6) Data flow
+7) Project structure
+8) React.createElement
+9) ReactDOM.render
+10) JSX
+11) Components
+12) Statles Components
+13) One parent
+14) Props
+15) defaultProps
+16) propTypes
+17) conditional render (&&, ? :)
+18) Collections
+19) Keys
+//TableList
+

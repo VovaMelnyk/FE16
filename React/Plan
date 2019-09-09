@@ -1,15 +1,5 @@
-============================= styles  ====================
-1) inline CSS
-2) CSS file
-3) CSS module
-4) classnames https://www.npmjs.com/package/classnames
-============================= Data, props, collections ===========================
-1) Data flow
-2) Props
-3) defaultProps 
-4) propTypes https://www.npmjs.com/package/prop-types
-5) conditional render (&&, ? :)
-6) Collections
-7) Keys
+=============Linter=============
+npm i --save-dev prettier eslint-config-airbnb eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y husky lint-staged
+
 //TableList
 

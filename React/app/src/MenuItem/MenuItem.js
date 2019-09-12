@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import './MenuItem.css';
 
 const MenuItem = ({ active, href, text }) => {
-  // console.log('props', props);
-  // console.log(props.active && 'active');
   return (
-    <li className={active === true ? 'active' : null}>
-      <a href={href}>{text}</a>
+    <li className={`sidebar__item ${active === true ? 'active' : null}`}>
+      <a href={href} className="sidebar__link">
+        {text}
+      </a>
     </li>
   );
 };

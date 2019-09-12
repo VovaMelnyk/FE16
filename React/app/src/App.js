@@ -10,12 +10,24 @@ function App() {
       href: '/dashboard',
     },
     {
-      text: 'user profile',
-      href: '/user',
+      text: 'Site admin',
+      href: '/admin',
     },
     {
-      text: 'notifications',
-      href: '/notifications',
+      text: 'Site preview',
+      href: '/preview',
+    },
+    {
+      text: 'Modals',
+      href: '/modals',
+    },
+    {
+      text: 'Cart',
+      href: '/cart',
+    },
+    {
+      text: 'Counter',
+      href: '/counter',
     },
   ];
 

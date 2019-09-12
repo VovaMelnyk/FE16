@@ -1,6 +1,9 @@
 import React from 'react';
 import './Main.css';
 import Cart from '../Cart/Cart';
+import Header from '../Header/Header';
+import Counter from '../Counter/Counter';
+import Modal from '../Modal/Modal';
 
 const Main = () => {
   const cartItems = [
@@ -31,8 +34,10 @@ const Main = () => {
   ];
   return (
     <main className="main">
-      Main
-      <Cart cartItems={cartItems} />
+      <Header />
+      {false && <Counter />}
+      {false && <Modal />}
+      {false && <Cart cartItems={cartItems} />}
     </main>
   );
 };

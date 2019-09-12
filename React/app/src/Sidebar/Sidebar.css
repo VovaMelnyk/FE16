@@ -1,4 +1,9 @@
 .sidebar {
-    width: 25%;
-    background-color: yellowgreen;
+    width: 15%;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/img/forest.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 30px;
+    list-style: none;
 }

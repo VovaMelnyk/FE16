@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Counter from '../Counter/Counter';
 import Modal from '../Modal/Modal';
 
-const Main = () => {
+const Main = ({ isOpen, toggleModal }) => {
   const cartItems = [
     {
       name: 'Common Projects',
@@ -34,9 +34,9 @@ const Main = () => {
   ];
   return (
     <main className="main">
-      <Header />
-      {false && <Counter />}
-      {false && <Modal />}
+      <Header toggleModal={toggleModal} />
+      {/* <Counter /> */}
+      {isOpen && <Modal toggleModal={toggleModal} />}
       {false && <Cart cartItems={cartItems} />}
     </main>
   );

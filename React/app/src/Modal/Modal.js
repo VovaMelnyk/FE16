@@ -1,9 +1,9 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './Modal.css';
 
-const Modal = () => (
-  <div className="overlay">
+const Modal = ({ toggleModal }) => (
+  <div className="overlay" onClick={toggleModal}>
     <div className="modal">
       <h2>Title</h2>
       <p>
@@ -16,7 +16,7 @@ const Modal = () => (
 );
 
 Modal.propTypes = {
-  // bla: PropTypes.string,
+  toggleModal: PropTypes.func.isRequired,
 };
 
 Modal.defaultProps = {

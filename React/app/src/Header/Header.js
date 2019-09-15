@@ -3,11 +3,11 @@ import React from 'react';
 import { FaUserAlt, FaShoppingCart } from 'react-icons/fa';
 import './Header.css';
 
-const Header = () => (
+const Header = ({ toggleModal }) => (
   <header className="header">
     <ul className="nav">
       <li className="nav__item">
-        <FaUserAlt />
+        <FaUserAlt onClick={toggleModal} />
       </li>
       <li className="nav__item">
         <FaShoppingCart />

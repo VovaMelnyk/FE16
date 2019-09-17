@@ -19,4 +19,16 @@
   background: rgba(255, 255, 255, 0.85);
   text-align: center;
   padding: 20px;
+  z-index: 300;
+}
+
+.modalBtn {
+  display: block;
+  width: 150px;
+  margin: auto;
+  padding: 10px 15px;
+  background-color: #ccc;
+  border: none;
+  outline: none;
+  margin-top: 20px;
 }

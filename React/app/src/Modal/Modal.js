@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Modal.css';
 
 const Modal = ({ toggleModal }) => (
-  <div className="overlay" onClick={toggleModal}>
+  <div className="overlay">
     <div className="modal">
       <h2>Title</h2>
       <p>
@@ -11,6 +11,9 @@ const Modal = ({ toggleModal }) => (
         ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
         ipsumlorem ipsumlorem ipsum
       </p>
+      <button className="modalBtn" onClick={toggleModal}>
+        Close
+      </button>
     </div>
   </div>
 );

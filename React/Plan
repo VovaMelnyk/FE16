@@ -1,17 +1,9 @@
-========== State and events =====================
-Class component structure
-events
-Counter Example
-Inline callback
-Custom method
-Context troubles
-Inline bind
-Constructor bind
-Arrow method
-State (when use and render when update)
-setState (obj, and function)
-async setState (second argument in setState or async await)
-pass method with setState to children component
-Modal and props children
-//TableList
-
+========== Forms =====================
+Controlled Component
+Single input
+Multiply inputs
+Id and uuid
+Checkbox
+Radio
+select
+Props children

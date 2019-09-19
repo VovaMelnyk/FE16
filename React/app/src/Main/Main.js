@@ -12,6 +12,10 @@ class Main extends React.Component {
     cardList: [],
   };
 
+  componentWillUnmount() {
+    console.log('Willunmount');
+  }
+
   inputChange = ({ target }) => {
     const { name, value } = target;
     this.setState({

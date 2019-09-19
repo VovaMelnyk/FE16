@@ -1,9 +1,4 @@
-========== Forms =====================
-Controlled Component
-Single input
-Multiply inputs
-Id and uuid
-Checkbox
-Radio
-select
-Props children
+========== component Life cycle =====================
+Mount
+update
+unmount

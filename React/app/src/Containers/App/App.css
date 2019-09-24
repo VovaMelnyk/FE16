@@ -1,5 +1,5 @@
 .App-container {
-  display: flex;
+  /* display: flex; */
   height: 100vh;
 }
 * {
@@ -14,4 +14,8 @@ ul {
 
 a {
   text-transform: none;
+}
+
+h1 {
+  text-align: center;
 }

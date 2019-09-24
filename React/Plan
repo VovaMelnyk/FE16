@@ -1,4 +1,7 @@
-========== component Life cycle =====================
-Mount
-update
-unmount
+========== API =====================
+1) Components
+2) Containers
+3) axios and get npm i axios
+4) Loader
+5) error message
+6) .env (process.env.) (REACT_APP_API)

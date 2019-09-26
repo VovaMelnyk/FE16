@@ -5,3 +5,10 @@
 4) Loader
 5) error message
 6) .env (process.env.) (REACT_APP_API)
+7)Post 
+8) Put 
+9) Delete
+npm install -g json-server
+create json
+json-server --watch db.json
+

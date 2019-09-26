@@ -3,58 +3,109 @@ import axios from 'axios';
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import './App.css';
-import NewsCollection from '../../Components/NewsColection/NewsColection';
+import Form from '../../Components/Form/Form';
+import List from '../../Components/List/List';
 
 class App extends React.Component {
   state = {
-    news: null,
-    loader: true,
-    error: null,
+    content: '',
+    list: [],
   };
 
   componentDidMount() {
-    axios
-      .get('http://content.guardianapis.com/search?api-key=test')
-      .then(answer =>
-        this.setState({
-          news: answer.data.response.results,
-        }),
-      )
-      .catch(err =>
-        this.setState({
-          error: 'Sorry we could not find news, Try again later',
-        }),
-      )
-      .finally(() =>
-        this.setState({
-          loader: false,
-        }),
-      );
-
-    axios
-      .get(
-        'https://content.guardianapis.com/sport/live/2019/sep/24/cycling-road-world-championships-2019-womens-individual-time-trial-live?show-blocks=body&api-key=test',
-      )
-      .then(data => console.log(data));
+    axios.get('http://localhost:3000/posts').then(res =>
+      this.setState({
+        list: res.data,
+      }),
+    );
   }
 
-  renderContent = () => {
-    const { loader, error, news } = this.state;
-    if (loader) {
-      return <Loader type="Plane" color="#00BFFF" height={100} width={100} />;
-    } else if (error) {
-      return <h3>{error}</h3>;
-    } else {
-      return <NewsCollection news={news} />;
-    }
+  // componentDidUpdate() {
+  //   axios.get('http://localhost:3000/posts').then(res =>
+  //     this.setState({
+  //       list: res.data,
+  //     }),
+  //   );
+  // }
+
+  inputChange = ({ target }) => {
+    const { value, name } = target;
+    this.setState({
+      [name]: value,
+    });
   };
 
+  formSubmit = e => {
+    e.preventDefault();
+    axios
+      .post('http://localhost:3000/posts', {
+        text: this.state.content,
+        complete: false,
+      })
+      .then(res =>
+        this.setState(prev => ({
+          list: [...prev.list, res.data],
+          content: '',
+        })),
+      );
+  };
+
+  deleteItem = id => {
+    axios.delete(`http://localhost:3000/posts/${id}`).then(res => {
+      // this.setState(prev => ({
+      //   list: prev.list.filter(el => el.id !== id),
+      // }));
+      const { list } = this.state;
+      const i = list.findIndex(el => el.id === id);
+      const copyList = list.slice();
+      copyList.splice(i, 1);
+      this.setState({
+        list: copyList,
+      });
+    });
+  };
+
+  completeItem = id => {
+    const { list } = this.state;
+    const updateItem = list.find(el => el.id === id);
+    updateItem.complete = !updateItem.complete;
+    axios.put(`http://localhost:3000/posts/${id}`, updateItem).then(res => {
+      const i = list.findIndex(el => el.id === id);
+      const copyList = list.slice();
+      copyList.splice(i, 1, updateItem);
+      this.setState({
+        list: copyList,
+      });
+    });
+  };
+
+  // componentDidMount() {
+  //   // axios.get('http://localhost:3000/posts').then(data => console.log(data));
+  //   // axios.post('http://localhost:3000/posts', {
+  //   //   name: 'test',
+  //   //   last: 'last',
+  //   // });
+  //   // axios.delete('http://localhost:3000/posts/2');
+  //   // axios.put('http://localhost:3000/posts/3', {
+  //   //   name: 'test2222',
+  //   //   last: 'last33333',
+  //   // });
+  // }
+
   render() {
-    const { news, loader, error } = this.state;
+    const { content, list } = this.state;
     return (
       <div className="App-container">
-        <h1> Guardians News</h1>
-        {this.renderContent()}
+        <Form
+          content={content}
+          inputChange={this.inputChange}
+          formSubmit={this.formSubmit}
+        />
+        <List
+          list={list}
+          deleteItem={this.deleteItem}
+          completeItem={this.completeItem}
+        />
       </div>
     );
   }

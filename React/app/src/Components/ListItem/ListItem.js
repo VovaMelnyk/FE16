@@ -14,9 +14,9 @@ class ListItem extends React.Component {
   };
 
   render() {
-    const { text, complete } = this.props;
+    const { text, complete, id } = this.props;
     return (
-      <li className={complete ? 'done' : 'text'}>
+      <li className={complete ? 'done' : 'text'} id={id}>
         {text}
         <button onClick={this.handlerDelete}>Delete</button>
         <button onClick={this.handlerComplete}>Complete</button>

@@ -1,112 +1,61 @@
 import React from 'react';
-import axios from 'axios';
-import Loader from 'react-loader-spinner';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import './App.css';
-import Form from '../../Components/Form/Form';
-import List from '../../Components/List/List';
+import Red from '../../Components/Red/Red';
+import AppProvider from '../../Context/Context';
+import Modal from '../../Components/Modal/Modal';
 
 class App extends React.Component {
-  state = {
-    content: '',
-    list: [],
-  };
+  // state = {
+  //   textModal: false,
+  //   formModal: false,
+  // };
 
-  componentDidMount() {
-    axios.get('http://localhost:3000/posts').then(res =>
-      this.setState({
-        list: res.data,
-      }),
-    );
-  }
+  // openTextModal = () => {
+  //   this.setState({
+  //     textModal: true,
+  //   });
+  // };
 
-  // componentDidUpdate() {
-  //   axios.get('http://localhost:3000/posts').then(res =>
-  //     this.setState({
-  //       list: res.data,
-  //     }),
-  //   );
-  // }
+  // openFormModal = () => {
+  //   this.setState({
+  //     formModal: true,
+  //   });
+  // };
 
-  inputChange = ({ target }) => {
-    const { value, name } = target;
-    this.setState({
-      [name]: value,
-    });
-  };
-
-  formSubmit = e => {
-    e.preventDefault();
-    axios
-      .post('http://localhost:3000/posts', {
-        text: this.state.content,
-        complete: false,
-      })
-      .then(res =>
-        this.setState(prev => ({
-          list: [...prev.list, res.data],
-          content: '',
-        })),
-      );
-  };
-
-  deleteItem = id => {
-    axios.delete(`http://localhost:3000/posts/${id}`).then(res => {
-      // this.setState(prev => ({
-      //   list: prev.list.filter(el => el.id !== id),
-      // }));
-      const { list } = this.state;
-      const i = list.findIndex(el => el.id === id);
-      const copyList = list.slice();
-      copyList.splice(i, 1);
-      this.setState({
-        list: copyList,
-      });
-    });
-  };
-
-  completeItem = id => {
-    const { list } = this.state;
-    const updateItem = list.find(el => el.id === id);
-    updateItem.complete = !updateItem.complete;
-    axios.put(`http://localhost:3000/posts/${id}`, updateItem).then(res => {
-      const i = list.findIndex(el => el.id === id);
-      const copyList = list.slice();
-      copyList.splice(i, 1, updateItem);
-      this.setState({
-        list: copyList,
-      });
-    });
-  };
-
-  // componentDidMount() {
-  //   // axios.get('http://localhost:3000/posts').then(data => console.log(data));
-  //   // axios.post('http://localhost:3000/posts', {
-  //   //   name: 'test',
-  //   //   last: 'last',
-  //   // });
-  //   // axios.delete('http://localhost:3000/posts/2');
-  //   // axios.put('http://localhost:3000/posts/3', {
-  //   //   name: 'test2222',
-  //   //   last: 'last33333',
-  //   // });
-  // }
-
+  // closeModal = value => {
+  //   this.setState({
+  //     [value]: false,
+  //   });
+  // };
   render() {
-    const { content, list } = this.state;
+    // const { textModal, formModal } = this.state;
     return (
-      <div className="App-container">
-        <Form
-          content={content}
-          inputChange={this.inputChange}
-          formSubmit={this.formSubmit}
-        />
-        <List
-          list={list}
-          deleteItem={this.deleteItem}
-          completeItem={this.completeItem}
-        />
-      </div>
+      // <>
+      //   <button onClick={this.openTextModal}>Open text modal</button>
+      //   <button onClick={this.openFormModal}>Open form modal</button>
+      //   {textModal && (
+      //     <Modal value="textModal" close={this.closeModal}>
+      //       <h2>Title</h2>
+      //       <p>Test user content</p>
+      //     </Modal>
+      //   )}
+
+      //   {formModal && (
+      //     <Modal value="formModal" close={this.closeModal}>
+      //       <form>
+      //         <input type="text" />
+      //         <input type="text" />
+      //         <input type="text" />
+      //         <input type="text" />
+      //       </form>
+      //     </Modal>
+      //   )}
+      // </>
+      <AppProvider>
+        <div className="App-container">
+          <Red />
+        </div>
+      </AppProvider>
     );
   }
 }

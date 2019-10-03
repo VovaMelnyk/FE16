@@ -1,5 +1,14 @@
-========== API =====================
-1) props.children
-2) HOC
-3) Context API
+============= Routing ==============
+1) History (hash, browser, memory)
+2) React router
+3) BrowserRouter/HashRouter
+4) Route
+5) Switch
+6) Redirect
+7) Link & NavLink
+8) Route (component, render)
+9) Route props and nested routing
+
+<Route path="/about" render={props => <component {...props} myProp="custom prop" />} />
+
 

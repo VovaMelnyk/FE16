@@ -1,47 +1,73 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Header from '../../Components/Header/Header';
-import Html from '../../Components/Html/Html';
-import Css from '../../Components/Css/Css';
-import Javascript from '../../Components/Javascript/Javascript';
-import Frameworks from '../../Components/Frameworks/Frameworks';
 import './App.css';
+import UsersList from '../../Components/UsersList/UsersList';
+import { Switch, Route } from 'react-router-dom';
+import UserInfo from '../../Components/UserInfo/UserInfo';
+import Settings from '../../Components/Settings/Settings';
 
 class App extends React.Component {
-  state = {
-    userData: {},
-  };
+  state = { users: [], isLoading: true, isError: false };
 
   componentDidMount() {
-    fetch('https://randomuser.me/api/')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
       .then(data =>
         this.setState({
-          userData: data.results[0],
+          users: data,
+        }),
+      )
+      .catch(err =>
+        this.setState({
+          isError: true,
+        }),
+      )
+      .finally(() =>
+        this.setState({
+          isLoading: false,
         }),
       );
   }
 
   render() {
+    // const link =
+    //   'https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123';
+    // const search = new URL(link).search;
+    // const params = new URLSearchParams(search);
+    // console.log(params.get('q'));
+
+    const { users } = this.state;
+    // let link =
+    //   'https://www.iaai.com/VehicleDetails?itemid=33772735&RowNumber=0&similarVehicleItemId=&isNext=&loadRecent=true';
+    // let search = new URL(link).search;
+    // let params = new URLSearchParams(search);
+    // console.log(params.get('itemid'));
+    // console.log(params.get('RowNumber'));
+    // console.log(params.get('loadRecent'));
+
+    // console.log(search);
+    // console.log(params);
     return (
-      <div>
-        <Header />
+      <>
         <Switch>
-          <Route component={Html} path="/" exact />
-          <Route component={Css} path="/css" />
           <Route
-            path="/javascript"
-            render={props => (
-              <Javascript {...props} userData={this.state.userData} />
-            )}
+            path="/"
+            exact
+            render={props => <UsersList users={users} {...props} />}
           />
-          <Route component={Frameworks} path="/frameworks" />
+          <Route path="/settings" component={Settings} />
+          <Route path="/:id" component={UserInfo} />
         </Switch>
-        {/* <Html />
-        <Css />
-        <Javascript />
-        <Frameworks /> */}
-      </div>
+
+        {/* <Switch>
+          <Route path="/" render={props => <p>Hello</p>} exact />
+          <Route
+            render={props => <UsersList users={users} {...props} />}
+            path="/users"
+          />
+          <Route path="/users/:userId" component={UserInfo} />
+        </Switch> */}
+        {/* // <UsersList users={users} /> */}
+      </>
     );
   }
 }

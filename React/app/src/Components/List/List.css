@@ -1,0 +1,15 @@
+.container {
+}
+
+.container div {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.container div p {
+  width: 19%;
+}

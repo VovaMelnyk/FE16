@@ -1,0 +1,59 @@
+/* ul {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 60%);
+}
+
+.musicList {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.music {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.star {
+  margin-left: 5px;
+  color: gold;
+}
+
+.favorites {
+  box-sizing: border-box;
+  width: 60%;
+  padding: 10px;
+  background-color: rgb(94, 86, 74);
+}
+
+.list-item {
+  padding: 10px;
+}
+
+.fade-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.fade-enter-active {
+  max-height: 30px;
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.fade-exit {
+  max-height: 30px;
+  opacity: 1;
+}
+
+.fade-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transition: all 500ms;
+} */

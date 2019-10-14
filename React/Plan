@@ -1,3 +1,13 @@
-============= Routing (params) ==============
-1) Search i search params
-2) Dynamic routing (:id)
+============= Code splitting and animation ==============
+1) Code splitting (when it use)
+2) react-loadable (add dynamic import and delete static import)
+3) Lazy and Suspense
+4) yarn add react-transition-group
+in: 
+timeout: 
+unmountOnExit:
+
+entering 
+entered 
+exiting 
+exited 

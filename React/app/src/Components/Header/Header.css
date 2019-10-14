@@ -1,0 +1,20 @@
+.navigation {
+  list-style: none;
+  padding: 40px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+}
+
+.navigation__item {
+  text-align: center;
+  width: 30%;
+}
+
+.navigation__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-size: 40px;
+}

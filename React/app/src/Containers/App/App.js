@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
-// import Loadable from 'react-loadable';
-// import Loading from '../../Components/Loading/Loading';
+import Loadable from 'react-loadable';
+import Loading from '../../Components/Loading/Loading';
 import Header from '../../Components/Header/Header';
 // import Home from '../../Components/Home/Home';
 // import Contact from '../../Components/Contact/Contact';
@@ -61,7 +61,7 @@ class App extends React.Component {
           </Switch>
         </Suspense>
         {/* <SimpleAnimation /> */}
-        {/* <GroupAnimation /> */}
+        <GroupAnimation />
       </>
     );
   }

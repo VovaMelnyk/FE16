@@ -19,7 +19,13 @@ class SimpleAnimation extends Component {
         <button className="display" onClick={this.switch}>
           List
         </button>
-        {/* {this.state.showList && (
+
+        <CSSTransition
+          in={this.state.showList}
+          timeout={5000}
+          unmountOnExit
+          classNames="list-transition"
+        >
           <div className="menu">
             <ul className="list">
               <li className="list-item">Feed the dog</li>
@@ -28,9 +34,9 @@ class SimpleAnimation extends Component {
               <li className="list-item">Buy grossries</li>
             </ul>
           </div>
-        )} */}
+        </CSSTransition>
 
-        <CSSTransition
+        {/* <CSSTransition
           in={this.state.showList}
           timeout={400}
           classNames="list-transition"
@@ -45,7 +51,7 @@ class SimpleAnimation extends Component {
               <li className="list-item"> Writing Clean code</li>
             </ul>
           </div>
-        </CSSTransition>
+        </CSSTransition> */}
       </div>
     );
   }

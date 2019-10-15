@@ -1,4 +1,4 @@
-/* ul {
+ul {
   margin: 0;
   padding: 0 10px;
 }
@@ -56,4 +56,4 @@
   max-height: 0;
   opacity: 0;
   transition: all 500ms;
-} */
+}

@@ -3,26 +3,21 @@ import './Counter.css';
 
 class Counter extends React.Component {
   state = {
-    count: 1,
+    count: 0,
   };
 
   increment = () => {
-    this.setState(
-      prevstate => ({
-        count: prevstate.count + 1,
-      }),
-      () => console.log(this.state),
-    );
+    this.setState(prevState => ({
+      count: prevState.count + 1,
+    }));
   };
 
   decrement = async () => {
-    await this.setState(prevstate => {
+    await this.setState(prevState => {
       return {
-        count: prevstate.count - 1,
+        count: prevState.count - 1,
       };
     });
-
-    console.log(this.state);
   };
 
   reset = () => {

@@ -12,8 +12,8 @@ class Counter extends React.Component {
     }));
   };
 
-  decrement = async () => {
-    await this.setState(prevState => {
+  decrement = () => {
+    this.setState(prevState => {
       return {
         count: prevState.count - 1,
       };

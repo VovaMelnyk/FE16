@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import Counter from './Counter/Counter';
 import './App.css';
 
-class App extends React.Component {
+class App extends PureComponent {
   render() {
     return (
       <div className="App-container">
-        <Counter />
+        <Counter name="user" />
       </div>
     );
   }

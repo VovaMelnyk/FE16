@@ -4,34 +4,6 @@ import { reset, increment, decrement } from '../redux/actions/counterActions';
 import './Counter.css';
 
 class Counter extends React.Component {
-  // state = {
-  //   count: 0,
-  // };
-
-  // increment = () => {
-  //   this.setState(prevState => ({
-  //     count: prevState.count + 1,
-  //   }));
-  // };
-
-  // decrement = () => {
-  //   this.setState(prevState => {
-  //     return {
-  //       count: prevState.count - 1,
-  //     };
-  //   });
-  // };
-
-  // reset = () => {
-  //   this.setState({
-  //     count: 0,
-  //   });
-  // };
-
-  // plus = () => {
-  //   this.props.increment(5);
-  // };
-
   plus = () => {
     const { increment } = this.props;
     increment(4);
@@ -76,32 +48,12 @@ class Counter extends React.Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     counter: state.counter,
-//     collection: state.collection,
-//   };
-// }
-
 const mapStateToProps = ({ counter, collection }) => {
   return {
     counter,
     collection,
   };
 };
-
-// const mapStateToProps = ({ counter, collection }) => ({
-//   counter,
-//   collection,
-// });
-
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     reset: () => dispatch(reset()),
-//     increment: number => dispatch(increment(number)),
-//     decrement: () => dispatch(decrement()),
-//   };
-// }
 
 const mapDispatchToProps = {
   reset,
@@ -113,23 +65,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(Counter);
-
-// const mapStateToProps = state => ({
-//   counter: state.counter,
-// });
-
-// // const mapStateToProps = ({ counter }) => ({
-// //   counter,
-// // });
-
-// // const mapDispatchToProps = dispatch => ({
-// //   increment: val => dispatch(increment(val)),
-// //   decrement: () => dispatch(decrement()),
-// //   reset: () => dispatch(reset()),
-// // });
-
-// const mapDispatchToProps = {
-//   increment,
-//   decrement,
-//   reset,
-// };

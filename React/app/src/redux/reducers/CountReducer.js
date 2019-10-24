@@ -16,27 +16,3 @@ function counterReducer(state = initialState, action) {
 }
 
 export default counterReducer;
-
-// let obj = {
-//   type: 'INCREMENT',
-// };
-
-// let obj = {
-//   type: 'DECREMENT',
-// };
-
-// let obj = {
-//   type: 'RESET',
-// };
-
-// function counter(state = [], action) {
-//   switch (action.type) {
-//     case 'RESET':
-//       return 0;
-//     case 'ADD':
-//       return [...state, action.data];
-//     case 'DECREMENT':
-//     default:
-//       return state;
-//   }
-// }

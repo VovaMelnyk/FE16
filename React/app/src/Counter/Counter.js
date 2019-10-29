@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { reset, increment, decrement } from '../redux/actions/counterActions';
+import { getCollectionAsync } from '../redux/actions/collectionAction';
 import './Counter.css';
 
 class Counter extends React.Component {
@@ -10,8 +11,13 @@ class Counter extends React.Component {
   };
 
   render() {
-    const { counter, reset, decrement, increment } = this.props;
-    console.log(this.props);
+    const {
+      counter,
+      reset,
+      decrement,
+      increment,
+      getCollectionAsync,
+    } = this.props;
     return (
       <div id="counter-app">
         <div id="display-container" className="container">
@@ -42,6 +48,9 @@ class Counter extends React.Component {
           >
             <i className="fa fa-refresh" />
           </button>
+          <button className="button" onClick={getCollectionAsync}>
+            Fetch
+          </button>
         </div>
       </div>
     );
@@ -59,6 +68,7 @@ const mapDispatchToProps = {
   reset,
   increment,
   decrement,
+  getCollectionAsync,
 };
 
 export default connect(

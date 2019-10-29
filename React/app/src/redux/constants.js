@@ -12,3 +12,11 @@ export const CLEAR_INPUT = 'CLEAR_INPUT';
 export const ADD_TASK = 'ADD_TASK';
 export const DELETE_TASK = 'DELETE_TASK';
 export const EDIT_TASK = 'EDIT_TASK';
+
+// ping conatants
+
+export const PING = 'PING';
+
+// fetch const
+
+export const FETCH_DATA = 'FETCH_DATA';

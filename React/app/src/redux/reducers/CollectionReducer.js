@@ -1,13 +1,10 @@
-const initialState = [
-  { id: 1, text: 'Do hw', compleat: false },
-  { id: 2, text: 'buy food', compleat: true },
-  { id: 3, text: 'Hello', compleat: false },
-];
+import { FETCH_DATA } from '../constants';
+const initialState = [];
 
 function collectionReducer(state = initialState, action) {
   switch (action.type) {
-    case 'ADD_ITEM':
-    case 'DELETE_ITEM':
+    case FETCH_DATA:
+      return [...action.payload];
     default:
       return state;
   }

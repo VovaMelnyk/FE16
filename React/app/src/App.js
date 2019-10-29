@@ -7,8 +7,8 @@ class App extends PureComponent {
   render() {
     return (
       <div className="App-container">
-        <Todo />
-        {/* <Counter name="user" /> */}
+        {/* <Todo /> */}
+        <Counter name="user" />
       </div>
     );
   }

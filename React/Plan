@@ -29,5 +29,13 @@ connect(mapStateToProps,mapDispatchToProps)(назва компонента);
 
 
 
-1) Select
-2) Reselect (npm install reselect, yarn add reselect)
+ Middleware (concept and how add to project)
+ Add logger
+ Add devtools with npm
+ Create middleware (store => next => action)
+ create ERROR__CATCHER middelware
+ redux thunk
+
+npm install --save redux-devtools-extension
+npm i --save redux-logger
+

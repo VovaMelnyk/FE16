@@ -20,3 +20,26 @@ export const PING = 'PING';
 // fetch const
 
 export const FETCH_DATA = 'FETCH_DATA';
+export const GET_DATA = 'GET_DATA';
+
+// saga constants
+
+export const LOADER_ON = 'LOADER_ON';
+export const LOADER_OFF = 'LOADER_OFF';
+
+// fetch user with saga constants
+
+export const FETCH_USER = 'FETCH_USER';
+export const SET_USER = 'SET_USER';
+
+// add user to redux
+
+export const ADD_USERS = 'ADD_USERS';
+
+// error constants
+
+export const SHOW_ERROR = 'SHOW_ERROR';
+
+// users constants
+
+export const FETCH_USERS = 'FETCH_USERS';

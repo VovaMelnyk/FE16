@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { reset, increment, decrement } from '../redux/actions/counterActions';
-import { getCollectionAsync } from '../redux/actions/collectionAction';
+import { fetchData } from '../redux/actions/collectionAction';
+import { fetchUser } from '../redux/actions/userActions';
+import { fetchUsers } from '../redux/actions/UsersAction';
 import './Counter.css';
 
 class Counter extends React.Component {
@@ -16,7 +18,9 @@ class Counter extends React.Component {
       reset,
       decrement,
       increment,
-      getCollectionAsync,
+      fetchData,
+      fetchUser,
+      fetchUsers,
     } = this.props;
     return (
       <div id="counter-app">
@@ -48,8 +52,25 @@ class Counter extends React.Component {
           >
             <i className="fa fa-refresh" />
           </button>
-          <button className="button" onClick={getCollectionAsync}>
+          {/* <button className="button" onClick={getCollectionAsync}>
             Fetch
+          </button> */}
+          <button
+            className="button"
+            onClick={fetchUsers}
+            type="button"
+            id="reset-button"
+          >
+            Saga
+          </button>
+
+          <button
+            className="button"
+            onClick={() => fetchUser(1)}
+            type="button"
+            id="increment-button"
+          >
+            User
           </button>
         </div>
       </div>
@@ -68,7 +89,8 @@ const mapDispatchToProps = {
   reset,
   increment,
   decrement,
-  getCollectionAsync,
+  fetchUsers,
+  fetchUser,
 };
 
 export default connect(

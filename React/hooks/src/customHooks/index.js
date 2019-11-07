@@ -7,7 +7,9 @@ export default function useFetch(url) {
   const fetchData = async () => {
     try {
       await setLoader(true);
-      await fetch(url).then(res => res.json()).then(data => setNews(data.hits)));
+      await fetch(url)
+        .then(res => res.json())
+        .then(data => setNews(data.hits));
       await setLoader(false);
     } catch (error) {}
   };

@@ -1,37 +1,9 @@
-async redux with redux saga
-
-1) install redux-saga (https://www.npmjs.com/package/redux-saga)
-1.1) Saga effects:
-take - Pauses until action received.
-call - Runs function. If it returns a promise, pauses the Saga until resolved.
-put - Dispatches an action.
-select - runs a selector function to get data from the state.
-takeLatest - Executes the operation, returns only the results of the last call.
-takeEvery - Will return results for all the calls triggered.
-race -  Runs effects simultaneously, then cancels them all once one finishes.
-fork - Performs a non-blocking operation on the function passed.
-2) create rootSaga (like rootReducer)
-3) create saga middleware
-4) create loadCollection Saga
-5) Create api function
-6) Create saga with parameters (user saga)
-
-
-
-1) поставити npm пакет
-2) підключити saga в store
-2.1) імпорт в store 
-2.2) Створити sagaMiddleware
-2.3) Додати його в store
-2.4) Запустити rootSaga
-3) Створити rootSaga
-3.1) Сформувати єдиний масив зі всіма сагами за допомогою ефекта all та ф=ї генератора
-4) Створити сагу для запиту юзерів (Генератор з try catch)
-4.1) імпорт ефектів put, takeEvery, call
-4.2) Створити екшени лоадера і помилки
-4.3) Створити арі методи
-4.4) Створити екшени для запису результатів в store
-4.5) Запустити екшени в потрібному порядку
-4.6) Створити екшен що запустить сагу юзерів
-4.7) імпорт як масив з takeEvery(action.type, saga)
-5) Підєднати це все до компонента
+1) React Hook (v16.8) (use state and component lifeCycle without class)
+2) Basic Hooks (useState,useEffect)
+3) click example with Hook
+4) Counter with Hook
+5) useEffect and fetch
+6) fetching data with Hooks (effect loop)
+7) create own hook
+8) Hook practice
+9) Hooks crud app

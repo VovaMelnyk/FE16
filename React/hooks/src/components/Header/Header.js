@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './Header.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Header.css";
 
 const Header = props => (
   <ul className="menu">
@@ -12,6 +12,9 @@ const Header = props => (
     </li>
     <li className="menu__item">
       <NavLink to="/fetch">Fetch</NavLink>
+    </li>
+    <li className="menu__item">
+      <NavLink to="/refs">Refs</NavLink>
     </li>
     <li className="menu__item">
       <NavLink to="/practice">Practice</NavLink>

@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "../components/Header/Header";
 import Click from "../components/Click/Click";
 import Fetch from "../components/Fetch/Fetch";
+import Refs from "../components/Refs/Refs";
 
 class App extends PureComponent {
   render() {
@@ -15,6 +16,7 @@ class App extends PureComponent {
           <Route exact path="/" component={Click} />
           <Route path="/counter" component={Counter} />
           <Route path="/fetch" component={Fetch} />
+          <Route path="/refs" component={Refs} />
         </Switch>
       </div>
     );

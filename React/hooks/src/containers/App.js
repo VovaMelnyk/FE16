@@ -1,11 +1,11 @@
 import React, { PureComponent } from "react";
-import Counter from "../components/Counter/Counter";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "../components/Header/Header";
-import Click from "../components/Click/Click";
-import Fetch from "../components/Fetch/Fetch";
-import Refs from "../components/Refs/Refs";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
+import Login from "../components/Login/Login";
+import Home from "../components/Home/Home";
+import Registration from "../components/Registration/Registration";
 
 class App extends PureComponent {
   render() {
@@ -13,10 +13,10 @@ class App extends PureComponent {
       <div className="App-container">
         <Header />
         <Switch>
-          <Route exact path="/" component={Click} />
-          <Route path="/counter" component={Counter} />
-          <Route path="/fetch" component={Fetch} />
-          <Route path="/refs" component={Refs} />
+          {/* <PrivateRoute exact path="/" component={Home} /> */}
+          <PrivateRoute exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/registration" component={Registration} />
         </Switch>
       </div>
     );

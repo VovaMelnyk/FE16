@@ -1,9 +1,12 @@
-1) React Hook (v16.8) (use state and component lifeCycle without class)
-2) Basic Hooks (useState,useEffect)
-3) click example with Hook
-4) Counter with Hook
-5) useEffect and fetch
-6) fetching data with Hooks (effect loop)
-7) create own hook
-8) Hook practice
-9) Hooks crud app
+1) Add server (install and test) 
+2) Add .env server file
+3) Create basic components (Registration, Login, Home, Profile)
+4) Create Private Route and add redirect to Home
+4.1) Switch from login to register and back
+5) Create store, reducers, midelwares, thunk
+{user: fff,
+isAuth: fsfsd}
+6) Registration workFlow (Post request => write token to storage => add user to redux)
+7) LogOut workFlow (clean up storage and state)
+8) Login workFlow (set up user to redux and rewrite token to storage)
+ Work with token and localStorage
